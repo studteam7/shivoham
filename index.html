@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PathPilot - Guide your future with career awareness, discovery, and personalized recommendations for students.">
+    <title>PathPilot - Student Career Guidance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome for Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>PathPilot <span class="tagline">Guide Your Future</span></h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home" class="active" data-section="home">Home</a></li>
+                    <li><a href="#awareness" data-section="awareness">Why Career?</a></li>
+                    <li><a href="#explore" data-section="explore">Explore Careers</a></li>
+                    <li><a href="#quiz" data-section="quiz">Career Quiz</a></li>
+                    <li><a href="#feedback" data-section="feedback">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-section="home">Home</a></li>
+                <li><a href="#awareness" data-section="awareness">Why Career?</a></li>
+                <li><a href="#explore" data-section="explore">Explore Careers</a></li>
+                <li><a href="#quiz" data-section="quiz">Career Quiz</a></li>
+                <li><a href="#feedback" data-section="feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Section: Home (Feature 1 - Intro) -->
+        <section id="home" class="active-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Don't Just Drift, <span class="highlight">Pilot Your Future!</span></h2>
+                    <p>Discover the right career path early. Avoid confusion and build a successful future with
+                        PathPilot.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="navigateTo('explore')">Explore Careers</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('quiz')">Take Quiz</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for illustration -->
+                    <img src="assets/images/hero-illustration.svg" alt="Student looking at future paths"
+                        onerror="this.style.display='none'">
+                    <div class="placeholder-box">🚀</div>
+                </div>
+            </div>
+
+            <div class="features-summary">
+                <div class="feature-card" onclick="navigateTo('awareness')">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Why It Matters</h3>
+                    <p>Understand the impact of early career planning.</p>
+                </div>
+                <div class="feature-card" onclick="navigateTo('explore')">
+                    <i class="fas fa-compass"></i>
+                    <h3>Explore Paths</h3>
+                    <p>Browse 25+ career options across streams.</p>
+                </div>
+                <div class="feature-card" onclick="navigateTo('quiz')">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Take Quiz</h3>
+                    <p>Find matches based on your interests.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Career Awareness (Feature 1 - Detail) -->
+        <section id="awareness">
+            <div class="container">
+                <h2 class="section-title">Why Career Awareness Matters?</h2>
+                <div class="awareness-content">
+                    <!-- Content will be populated here -->
+                    <div class="awareness-grid">
+                        <div class="awareness-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Prevents Confusion</h3>
+                            <p>Making informed decisions early saves you from regret later.</p>
+                        </div>
+                        <div class="awareness-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Academic Success</h3>
+                            <p>Choosing the right stream boosts motivation and grades.</p>
+                        </div>
+                        <div class="awareness-item">
+                            <i class="fas fa-smile"></i>
+                            <h3>Confidence</h3>
+                            <p>Knowing your path builds confidence in your future.</p>
+                        </div>
+                    </div>
+
+                    <div class="consequences-box">
+                        <h3>But what if you ignore it?</h3>
+                        <ul>
+                            <li><i class="fas fa-times-circle"></i> Wrong subject selection</li>
+                            <li><i class="fas fa-times-circle"></i> Academic stress</li>
+                            <li><i class="fas fa-times-circle"></i> Wasted potential</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Explore Careers (Feature 2 & Option C) -->
+        <section id="explore">
+            <div class="container">
+                <h2 class="section-title">Explore Career Paths</h2>
+
+                <!-- Search and Filter (Option C) -->
+                <div class="filters-container">
+                    <div class="search-bar">
+                        <input type="text" id="career-search" placeholder="Search careers (e.g. Engineer, Doctor)...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="stream-filter">
+                            <option value="all">All Streams</option>
+                            <option value="Science (PCM)">Science (PCM)</option>
+                            <option value="Science (PCB)">Science (PCB)</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Arts/Humanities">Arts</option>
+                            <option value="Vocational">Vocational</option>
+                        </select>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Business">Business</option>
+                            <option value="Creative">Creative</option>
+                            <option value="Government">Government</option>
+                        </select>
+                        <button id="reset-filters" class="btn btn-outline">Reset</button>
+                    </div>
+                </div>
+
+                <!-- Career Catalog -->
+                <div id="career-grid" class="career-grid">
+                    <!-- Career cards will be injected here by JS -->
+                    <p class="loading-text">Loading careers...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Details Modal -->
+        <div id="career-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body">
+                    <!-- Details injected by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Career Quiz (Feature 3) -->
+        <section id="quiz">
+            <div class="container">
+                <h2 class="section-title">Find Your Perfect Match</h2>
+                <div id="quiz-container">
+                    <div id="quiz-intro">
+                        <h3>Ready to discover your path?</h3>
+                        <p>Answer a few simple questions to get personalized career recommendations.</p>
+                        <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+                    </div>
+                    <div id="quiz-questions" style="display: none;">
+                        <div class="progress-bar-container">
+                            <div id="progress-bar"></div>
+                        </div>
+                        <div id="question-card">
+                            <!-- Question injected here -->
+                        </div>
+                    </div>
+                    <div id="quiz-results" style="display: none;">
+                        <h3>Your Top Career Matches</h3>
+                        <div id="results-list"></div>
+                        <button id="retake-quiz-btn" class="btn btn-secondary">Retake Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Feedback (Option I) -->
+        <section id="feedback">
+            <div class="container">
+                <h2 class="section-title">We Value Your Feedback</h2>
+                <div class="feedback-form-container">
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="feedback-name">Name (Optional)</label>
+                            <input type="text" id="feedback-name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-type">Type</label>
+                            <select id="feedback-type">
+                                <option value="suggestion">Suggestion</option>
+                                <option value="bug">Report Issue</option>
+                                <option value="praise">Appreciation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-msg">Message</label>
+                            <textarea id="feedback-msg" rows="4" placeholder="Tell us what you think..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </form>
+                    <div id="feedback-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you! Your feedback has been saved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PathPilot</h3>
+                    <p>Empowering students to make informed career choices.</p>
+                    <div class="team-list" style="margin-top: 15px;">
+                        <h4 style="color: var(--secondary-color); font-size: 1rem; margin-bottom: 5px;">Team Members
+                            (Team 1):</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.9em; line-height: 1.6;">
+                            <li>Shiv Pratap Pal</li>
+                            <li>Anugrah Narayan Choube</li>
+                            <li>Ashok Kumar</li>
+                            <li>Raj Kumar Yadav</li>
+                            <li>Amitabh Mishra</li>
+                            <li>Inder Pal Singh</li>
+                            <li>Vinod Kumar Verma</li>
+                            <li>Santosh Kumar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                        <li><a href="#explore" onclick="navigateTo('explore')">Careers</a></li>
+                        <li><a href="#quiz" onclick="navigateTo('quiz')">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> Email: help@pathpilot.com</p>
+                    <p><i class="fas fa-user"></i> Contact Person: Shiv Pratap Pal</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: PM Shree Kendriya Vidyalaya - Amethi</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026-2036 PathPilot. Made with ❤️ for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/careers.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+
+</html>
